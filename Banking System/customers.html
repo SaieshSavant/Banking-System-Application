@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+   
+   
+
+    <title>Sparks Bank</title>
+  </head>
+  <body style="background-color: rgb(236, 203, 152);">
+   
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+       <h4>SPARKS BANK</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="./home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About Us</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link active" href="./customers.html">View Customers</a>
+          </li>
+       
+      </div>
+    </div>
+    
+  </nav>
+  <!-- nav bar ends here -->
+  <center>
+<div style="border: solid black 10px;width: 40%;margin-top: 10px;background-color: rgb(200, 42, 42);" class="userdetails">
+
+    <h3>Account Holder Name: Saiesh Savant</h3>
+    <h3>Current Bank Balance : <span id="myAccountBalance">50000</span></h3>
+</div> 
+  <!-- Button trigger modal -->
+<button type="button"style="margin:10px" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#sendMoney">
+Send Money
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="sendMoney" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="input-group mb-3">
+                <input type="text" id="enterName" class="form-control" placeholder="Enter Name"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                
+            </div>
+            <div class="input-group mb-3">
+               
+                <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                    aria-label="Amount (to the nearest dollar)">
+               
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" onclick=sendMoney() >Send Money</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</center>
+<!-- tables -->
+  
+<center>
+
+    <table style="width: 60%;height: 500px;color: aliceblue;" class="table ">
+      <thead bgcolor="white" style="color: black;">
+        <tr >
+          <th scope="col">SL.No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Bank</th>
+          <th scope="col">Bank Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr bgcolor="black">
+          <th scope="row">1</th>
+           <td>Shailesh Gaonkar</td>
+           <td>Axis Bank</td>
+          <td><p id="shaleshBalance">7000</p></td>
+        </tr>
+        <tr  bgcolor="black">
+          <th scope="row">2</th>
+           <td>Akkil M G</td>
+           <td>Axis Bank</td>
+          <td><p id="akkilBalance">5300</p></td>
+        </tr>
+        <tr  bgcolor="black">
+          <th scope="row">3</th>
+           <td>Manjunath Bhat</td>
+           <td>Canara Bank</td>
+          <td><p id="manjunathBalance">1700</p></td>
+        </tr>
+        <tr  bgcolor="black">
+          <th scope="row">4</th>
+           <td>Shetty Roshith</td>
+           <td>SBI Bank</td>
+          <td><p id="roshithBalance">2000</p></td>
+        </tr>
+        <tr  bgcolor="black">
+          <th scope="row">5</th>
+           <td>Aman Revankar</td>
+           <td>Sparks Bank</td>
+          <td><p id="amanBalance">1800</p></td>
+        </tr>
+        <tr  bgcolor="black">
+          <th scope="row">6</th>
+           <td>Kishan Revankar</td>
+           <td>Sparks Bank</td>
+          <td><p id="kishanBalance">6700</p></td>
+        </tr>
+    
+    
+  
+      </tbody>
+    </table>
+  </center>  
+
+<script src="./customers.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  </body>
+</html>
